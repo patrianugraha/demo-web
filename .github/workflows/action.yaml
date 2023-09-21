@@ -39,7 +39,7 @@ jobs:
           with:
             repository: 'patrianugraha/gke-demo-web'
             token: ${{ secrets.GIT_ACCESS_TOKEN }}
-            ref: 'maintainer'
+            ref: 'main'
 
         - name: Update Deployment Image Tag
           working-directory: "app-manifests/dev/${{ github.event.repository.name }}"
