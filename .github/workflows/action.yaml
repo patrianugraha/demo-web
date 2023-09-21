@@ -8,7 +8,7 @@ permissions:
   pull-requests: write
   issues: write
   repository-projects: write
-  
+
 jobs:
   build-push:
     name: Build and Push Image
@@ -45,7 +45,7 @@ jobs:
           with:
             repository: 'patrianugraha/gke-demo-web'
             token: ${{ secrets.GIT_ACCESS_TOKEN }}
-            ref: 'main'
+            ref: 'master'
 
         - name: Update Deployment Image Tag
           working-directory: "app-manifests/dev/${{ github.event.repository.name }}"
