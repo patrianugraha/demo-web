@@ -4,10 +4,19 @@ on:
     branches:
       - main
 permissions:
+  id-token: write
   contents: write
-  pull-requests: write
+  actions: write
+  checks: write
+  deployments: write
+  discussions: write
   issues: write
+  pages: read
+  packages: write
+  pull-requests: write
   repository-projects: write
+  security-events: write
+  statuses: write
 
 jobs:
   build-push:
@@ -45,7 +54,7 @@ jobs:
           with:
             repository: 'patrianugraha/gke-demo-web'
             token: ${{ secrets.GIT_ACCESS_TOKEN }}
-            ref: 'master'
+            ref: 'main'
 
         - name: Update Deployment Image Tag
           working-directory: "app-manifests/dev/${{ github.event.repository.name }}"
