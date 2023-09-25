@@ -65,5 +65,5 @@ jobs:
           run: |
             git config --global user.name "patrianugraha"
             git config --global user.email "patria.nugraha@smma.id"
-            git commit -am "feat: Update deployment image tag to ${{ github.event.repository.name }}"
+            git commit -am "feat: Update deployment image tag ${{ github.sha }} to ${{ github.event.repository.name }}"
             git push            
