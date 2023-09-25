@@ -1,13 +1,3 @@
-// ============================================================================
-// Copyright 2021 PT ALTO NETWORK, All Rights Reserved
-// This source code is protected by Indonesian and International copyright laws.
-// Any reproduction, modification, disclosure and/or distribution of the source
-// code in any form is strictly prohibited and may be unlawful without
-// PT ALTO Network's written consent.
-// All other copyright or ALTO trademark, including but not limited to this
-// source code, is PT ALTO NETWORK's property.
-// ============================================================================
-
 package main
 
 import (
