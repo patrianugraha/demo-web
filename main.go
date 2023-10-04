@@ -16,6 +16,9 @@ var htmlBody = `
 	<h1>
 		%s
 	</h1>
+	<h1>
+		%s
+	</h1>
 	<h3>
 		Current time : %s
 	</h3>
@@ -42,7 +45,8 @@ func hello(c echo.Context) error {
 	currentTime := utils.GetCurrentTime()
 	greetingText := utils.GetGreetingText()
 	bgColor := utils.GetBgColor()
-	responeBody := fmt.Sprintf(htmlBody, bgColor, greetingText, currentTime)
+	const appVersion = "CANARY VERSION"
+	responeBody := fmt.Sprintf(htmlBody, bgColor, greetingText, appVersion, currentTime)
 
 	return c.HTML(http.StatusOK, responeBody)
 }
