@@ -45,7 +45,7 @@ func hello(c echo.Context) error {
 	currentTime := utils.GetCurrentTime()
 	greetingText := utils.GetGreetingText()
 	bgColor := utils.GetBgColor()
-	const appVersion = "CANARY VERSION"
+	const appVersion = "CANARY VERSION 1"
 	responeBody := fmt.Sprintf(htmlBody, bgColor, greetingText, appVersion, currentTime)
 
 	return c.HTML(http.StatusOK, responeBody)
