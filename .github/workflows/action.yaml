@@ -61,6 +61,11 @@ jobs:
           run: |
             kustomize edit set image ${{ github.event.repository.name }}=asia-southeast2-docker.pkg.dev/sqe-non-prod/devops/dev/${{ github.event.repository.name }}:${{ github.sha }}
 
+        - name: Update Deployment Image Tag for canary
+          working-directory: "app-manifests/dev/demo-web-canary-dev"
+          run: |
+            kustomize edit set image demo-web-canary-dev=asia-southeast2-docker.pkg.dev/sqe-non-prod/devops/dev/${{ github.event.repository.name }}:${{ github.sha }}
+
         - name: "Push Updated Image Tag" # [4]
           run: |
             git config --global user.name "patrianugraha"
