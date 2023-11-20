@@ -21,3 +21,8 @@ func GetGreetingText() string {
 func GetBgColor() string {
 	return os.Getenv("BG_COLOR")
 }
+
+// GetSecret get value from secret
+func GetSecret() string {
+	return os.Getenv("demo-web-secret")
+}
